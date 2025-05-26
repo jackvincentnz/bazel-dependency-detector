@@ -15,7 +15,7 @@ The comma separated paths to maven lockfiles in the repository. Default `./maven
 ## Example usage
 
 ```yaml
-uses: jackvincentnz/bazel-dependency-detector@<SHA>
+uses: jackvincentnz/bazel-dependency-detector@74d1074f1f420bcb245ca7f761ecbf2a826a22d3
 with:
   token: ${{ github.token }}
   maven-lockfile-paths: './maven_install.json,./maven_tools_install.json'
