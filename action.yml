@@ -1,0 +1,14 @@
+name: 'Bazel Dependency Submission Action'
+description: 'Action using the dependency-submission-toolkit and Bazel'
+inputs:
+  token:
+    description: "GitHub Personal Access Token (PAT). Defaults to PAT provided by Action runner"
+    required: false
+    default: ${{ github.token }}
+  maven-lockfile-paths:
+    description: 'Paths to rules_jvm_external lockfile. (Comma separated string)'
+    required: true
+    default: './maven_install.json'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
