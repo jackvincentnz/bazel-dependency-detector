@@ -1,8 +1,12 @@
+name: Example Dependency Submission
+
 on: [push]
+
+permissions:
+  contents: write
 
 jobs:
   submit-bazel-dependencies:
-    name: Submit Bazel Dependencies
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
