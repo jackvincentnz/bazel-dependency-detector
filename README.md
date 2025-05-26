@@ -10,7 +10,7 @@ The GitHub token to use to submit with. Defaults to PAT provided by Action runne
 
 ### `maven-lockfile-paths`
 
-The comma separated paths to Maven lockfiles in the repository. Default `./maven_install.json`.
+The comma separated paths to Maven lockfiles in the repository. Default `maven_install.json`.
 
 ## Example usage
 
@@ -18,5 +18,5 @@ The comma separated paths to Maven lockfiles in the repository. Default `./maven
 uses: jackvincentnz/bazel-dependency-detector@74d1074f1f420bcb245ca7f761ecbf2a826a22d3
 with:
   token: ${{ secrets.GITHUB_TOKEN }}
-  maven-lockfile-paths: './maven_install.json,./maven_tools_install.json'
+  maven-lockfile-paths: 'maven_install.json,maven_tools_install.json'
 ```
