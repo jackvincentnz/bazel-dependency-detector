@@ -48,7 +48,7 @@ export function parseArtifacts(
   cache: PackageCache,
   lockfile: Lockfile
 ): Array<Package> {
-  if (lockfile.version !== '2') {
+  if (lockfile.version !== '2' && lockfile.version !== '3') {
     throw new Error(`Unsupported lockfile version: ${lockfile.version}. Expected version 2.`);
   }
 
@@ -90,7 +90,7 @@ export async function main() {
   const snapshot = new Snapshot({
     name: 'Bazel Dependency Detector',
     url: 'https://github.com/jackvincentnz/bazel-dependency-detector/tree/main',
-    version: '0.0.1'
+    version: '0.4.0'
   })
 
   for (const path of mavenLockfilePaths) {
