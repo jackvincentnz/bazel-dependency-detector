@@ -90,7 +90,7 @@ export async function main() {
   const snapshot = new Snapshot({
     name: 'Bazel Dependency Detector',
     url: 'https://github.com/jackvincentnz/bazel-dependency-detector/tree/main',
-    version: '0.4.0'
+    version: '0.4.1'
   })
 
   for (const path of mavenLockfilePaths) {

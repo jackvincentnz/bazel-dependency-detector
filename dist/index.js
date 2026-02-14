@@ -32054,7 +32054,7 @@ function parseArtifact(cache, name, artifacts) {
     return cache.package(purl);
 }
 function parseArtifacts(cache, lockfile) {
-    if (lockfile.version !== '2') {
+    if (lockfile.version !== '2' && lockfile.version !== '3') {
         throw new Error(`Unsupported lockfile version: ${lockfile.version}. Expected version 2.`);
     }
     return Object.keys(lockfile.artifacts).map(artifactName => {
@@ -32088,7 +32088,7 @@ async function main() {
     const snapshot = new l({
         name: 'Bazel Dependency Detector',
         url: 'https://github.com/jackvincentnz/bazel-dependency-detector/tree/main',
-        version: '0.0.1'
+        version: '0.4.1'
     });
     for (const path of mavenLockfilePaths) {
         const buildTarget = await processLockfile(path);
